@@ -1,0 +1,5 @@
+web: bundle exec puma -p $PORT -e $RACK_ENV -t 0:4
+
+# You should probably run sidekiq manually in development mode, so you know exactly what's going on.
+# Uncomment if you want foreman to start it for you instead.
+#worker: env NEWRELIC_ENABLE=false bundle exec sidekiq --config config/sidekiq.yml

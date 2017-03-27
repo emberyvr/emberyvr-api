@@ -1,0 +1,17 @@
+development:
+  database:
+    password:
+    user:
+  secret_key_base: '0a310984cf1ece5450bd9219a99df778377c05435a08457adb07bdf12730a38c6248ae60c014d5c53c1b063a5fddb9b590fd838a48c9b01f37efee6a9b77a187'
+
+production:
+  database:
+    password:
+    user:
+  secret_key_base: '2c251b79854b351bd558ce1c98b3f7543096e4bd1e3f38e390b47925d9aad5675e104a6842ee79637cc0f071b1d22382eb6405d5b4fea0d80c6a0330ff04b407'
+
+test:
+  database:
+    password:
+    user: 
+  secret_key_base: 'a86013a47ac86080497b91d9b239953453ebb164ff9d76b05bad62d4ebb8beedfa2f4e26eff3b08228997063d1e5e471cf51aa56e9fe2ded52cd73129633a82e'

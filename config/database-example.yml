@@ -1,0 +1,21 @@
+#Note - that with Rails 4.1+  Heroku will merge values from ENV['DATABASE_URL'] into values defined here.
+connection_details: &connection_url
+  url: <%= ENV['DATABASE_URL'] %>
+
+adapter_defaults: &adapter_defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV['DATABASE_POOL_SIZE'] || 5 %> # 5 is default for rails
+  timeout: 2000
+
+development:
+  database: emberyvr_development
+  <<: *adapter_defaults
+
+test:
+  database: emberyvr_test
+  <<: *adapter_defaults
+
+production:
+  <<: *adapter_defaults
+  <<: *connection_url
