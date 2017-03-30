@@ -1,4 +1,4 @@
-class UserPolicy < ApplicationPolicy
+class CompanyPolicy < ApplicationPolicy
   def update?
     true
   end
