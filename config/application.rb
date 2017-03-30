@@ -6,16 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-# Would have preferred to put this in config/initializers/settingslogic.rb, but
-# must load this before environment loads so that settings can be used in the env.
-class Settings < Settingslogic
-  source File.expand_path('config/settings.yml')
-  namespace Rails.env
-
-  # Load now, don't lazy load via method_missing. See https://github.com/binarylogic/settingslogic#readme
-  load!
-end
-
 module Emberyvr
   class Application < Rails::Application
     # config.autoload_paths += Dir[Rails.root.join('app', 'models', '{**/}')]
